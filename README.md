@@ -27,6 +27,7 @@
 [![os](https://img.shields.io/badge/Linux-passing-success)](https://github.com/catalyst-team/catalyst/workflows/catalyst/badge.svg?branch=master&event=push)
 [![os](https://img.shields.io/badge/OSX-passing-success)](https://github.com/catalyst-team/catalyst/workflows/catalyst/badge.svg?branch=master&event=push)
 [![os](https://img.shields.io/badge/WSL-passing-success)](https://github.com/catalyst-team/catalyst/workflows/catalyst/badge.svg?branch=master&event=push)
+
 </div>
 
 Catalyst is a PyTorch framework for Deep Learning Research and Development.
@@ -57,7 +58,7 @@ so you can create something new rather than write yet another train loop.
 </p>
 </details>
 
-----
+---
 
 ## Getting started
 
@@ -122,14 +123,15 @@ utils.onnx_export(model=model, batch=batch, file="./logs/mnist.onnx", verbose=Tr
 ```
 
 ### Step-by-step Guide
+
 1. Start with [Catalyst — A PyTorch Framework for Accelerated Deep Learning R&D](https://medium.com/pytorch/catalyst-a-pytorch-framework-for-accelerated-deep-learning-r-d-ad9621e4ca88?source=friends_link&sk=885b4409aecab505db0a63b06f19dcef) introduction.
 1. Try [notebook tutorials](#minimal-examples) or check [minimal examples](#minimal-examples) for first deep dive.
 1. Read [blog posts](https://catalyst-team.com/post/) with use-cases and guides.
 1. Learn machine learning with our ["Deep Learning with Catalyst" course](https://catalyst-team.com/#course).
 1. And finally, [join our slack](https://join.slack.com/t/catalyst-team-core/shared_invite/zt-d9miirnn-z86oKDzFMKlMG4fgFdZafw) if you want to chat with the team and contributors.
 
-
 ## Table of Contents
+
 - [Getting started](#getting-started)
   - [Step-by-step Guide](#step-by-step-guide)
 - [Table of Contents](#table-of-contents)
@@ -147,17 +149,17 @@ utils.onnx_export(model=model, batch=batch, file="./logs/mnist.onnx", verbose=Tr
   - [Trusted by](#trusted-by)
   - [Citation](#citation)
 
-
 ## Overview
+
 Catalyst helps you implement compact
 but full-featured Deep Learning pipelines with just a few lines of code.
 You get a training loop with metrics, early-stopping, model checkpointing,
 and other features without the boilerplate.
 
-
 ### Installation
 
 Generic installation:
+
 ```bash
 pip install -U catalyst
 ```
@@ -174,6 +176,7 @@ pip install git+https://github.com/catalyst-team/catalyst@master --upgrade
 # all available extensions are listed here:
 # https://github.com/catalyst-team/catalyst/blob/master/setup.py
 ```
+
 </p>
 </details>
 
@@ -181,6 +184,7 @@ Catalyst is compatible with: Python 3.7+. PyTorch 1.4+. <br/>
 Tested on Ubuntu 16.04/18.04/20.04, macOS 10.15, Windows 10, and Windows Subsystem for Linux.
 
 ### Documentation
+
 - [master](https://catalyst-team.github.io/catalyst/)
 - [22.02](https://catalyst-team.github.io/catalyst/v22.02/index.html)
 
@@ -188,36 +192,36 @@ Tested on Ubuntu 16.04/18.04/20.04, macOS 10.15, Windows 10, and Windows Subsyst
   <summary>2021 edition</summary>
   <p>
 
-    - [21.12](https://catalyst-team.github.io/catalyst/v21.12/index.html)
-    - [21.11](https://catalyst-team.github.io/catalyst/v21.11/index.html)
-    - [21.10](https://catalyst-team.github.io/catalyst/v21.10/index.html)
-    - [21.09](https://catalyst-team.github.io/catalyst/v21.09/index.html)
-    - [21.08](https://catalyst-team.github.io/catalyst/v21.08/index.html)
-    - [21.07](https://catalyst-team.github.io/catalyst/v21.07/index.html)
-    - [21.06](https://catalyst-team.github.io/catalyst/v21.06/index.html)
-    - [21.05](https://catalyst-team.github.io/catalyst/v21.05/index.html) ([Catalyst — A PyTorch Framework for Accelerated Deep Learning R&D](https://medium.com/pytorch/catalyst-a-pytorch-framework-for-accelerated-deep-learning-r-d-ad9621e4ca88?source=friends_link&sk=885b4409aecab505db0a63b06f19dcef))
-    - [21.04/21.04.1](https://catalyst-team.github.io/catalyst/v21.04/index.html), [21.04.2](https://catalyst-team.github.io/catalyst/v21.04.2/index.html)
-    - [21.03](https://catalyst-team.github.io/catalyst/v21.03/index.html), [21.03.1/21.03.2](https://catalyst-team.github.io/catalyst/v21.03.1/index.html)
+  - [21.12](https://catalyst-team.github.io/catalyst/v21.12/index.html)
+  - [21.11](https://catalyst-team.github.io/catalyst/v21.11/index.html)
+  - [21.10](https://catalyst-team.github.io/catalyst/v21.10/index.html)
+  - [21.09](https://catalyst-team.github.io/catalyst/v21.09/index.html)
+  - [21.08](https://catalyst-team.github.io/catalyst/v21.08/index.html)
+  - [21.07](https://catalyst-team.github.io/catalyst/v21.07/index.html)
+  - [21.06](https://catalyst-team.github.io/catalyst/v21.06/index.html)
+  - [21.05](https://catalyst-team.github.io/catalyst/v21.05/index.html) ([Catalyst — A PyTorch Framework for Accelerated Deep Learning R&D](https://medium.com/pytorch/catalyst-a-pytorch-framework-for-accelerated-deep-learning-r-d-ad9621e4ca88?source=friends_link&sk=885b4409aecab505db0a63b06f19dcef))
+  - [21.04/21.04.1](https://catalyst-team.github.io/catalyst/v21.04/index.html), [21.04.2](https://catalyst-team.github.io/catalyst/v21.04.2/index.html)
+  - [21.03](https://catalyst-team.github.io/catalyst/v21.03/index.html), [21.03.1/21.03.2](https://catalyst-team.github.io/catalyst/v21.03.1/index.html)
 
   </p>
   </details>
+
 - <details>
   <summary>2020 edition</summary>
   <p>
 
-    - [20.12](https://catalyst-team.github.io/catalyst/v20.12/index.html)
-    - [20.11](https://catalyst-team.github.io/catalyst/v20.11/index.html)
-    - [20.10](https://catalyst-team.github.io/catalyst/v20.10/index.html)
-    - [20.09](https://catalyst-team.github.io/catalyst/v20.09/index.html)
-    - [20.08.2](https://catalyst-team.github.io/catalyst/v20.08.2/index.html)
-    - [20.07](https://catalyst-team.github.io/catalyst/v20.07/index.html) ([dev blog: 20.07 release](https://medium.com/pytorch/catalyst-dev-blog-20-07-release-fb489cd23e14?source=friends_link&sk=7ab92169658fe9a9e1c44068f28cc36c))
-    - [20.06](https://catalyst-team.github.io/catalyst/v20.06/index.html)
-    - [20.05](https://catalyst-team.github.io/catalyst/v20.05/index.html), [20.05.1](https://catalyst-team.github.io/catalyst/v20.05.1/index.html)
-    - [20.04](https://catalyst-team.github.io/catalyst/v20.04/index.html), [20.04.1](https://catalyst-team.github.io/catalyst/v20.04.1/index.html), [20.04.2](https://catalyst-team.github.io/catalyst/v20.04.2/index.html)
+  - [20.12](https://catalyst-team.github.io/catalyst/v20.12/index.html)
+  - [20.11](https://catalyst-team.github.io/catalyst/v20.11/index.html)
+  - [20.10](https://catalyst-team.github.io/catalyst/v20.10/index.html)
+  - [20.09](https://catalyst-team.github.io/catalyst/v20.09/index.html)
+  - [20.08.2](https://catalyst-team.github.io/catalyst/v20.08.2/index.html)
+  - [20.07](https://catalyst-team.github.io/catalyst/v20.07/index.html) ([dev blog: 20.07 release](https://medium.com/pytorch/catalyst-dev-blog-20-07-release-fb489cd23e14?source=friends_link&sk=7ab92169658fe9a9e1c44068f28cc36c))
+  - [20.06](https://catalyst-team.github.io/catalyst/v20.06/index.html)
+  - [20.05](https://catalyst-team.github.io/catalyst/v20.05/index.html), [20.05.1](https://catalyst-team.github.io/catalyst/v20.05.1/index.html)
+  - [20.04](https://catalyst-team.github.io/catalyst/v20.04/index.html), [20.04.1](https://catalyst-team.github.io/catalyst/v20.04.1/index.html), [20.04.2](https://catalyst-team.github.io/catalyst/v20.04.2/index.html)
 
   </p>
   </details>
-
 
 ### Minimal Examples
 
@@ -304,6 +308,7 @@ runner.train(
 for logits in runner.predict_loader(loader=loaders["valid"]):
     assert logits.detach().cpu().numpy().shape[-1] == 10
 ```
+
 </p>
 </details>
 
@@ -345,9 +350,9 @@ runner.train(
     verbose=True,
 )
 ```
+
 </p>
 </details>
-
 
 <details>
 <summary>ML - multiclass classification</summary>
@@ -404,9 +409,9 @@ runner.train(
     ],
 )
 ```
+
 </p>
 </details>
-
 
 <details>
 <summary>ML - multilabel classification</summary>
@@ -465,9 +470,9 @@ runner.train(
     ]
 )
 ```
+
 </p>
 </details>
-
 
 <details>
 <summary>ML - multihead classification</summary>
@@ -563,9 +568,9 @@ runner.train(
     loggers={"console": dl.ConsoleLogger(), "tb": dl.TensorboardLogger("./logs/tb")},
 )
 ```
+
 </p>
 </details>
-
 
 <details>
 <summary>ML – RecSys</summary>
@@ -627,9 +632,9 @@ runner.train(
     ]
 )
 ```
+
 </p>
 </details>
-
 
 <details>
 <summary>CV - MNIST classification</summary>
@@ -680,9 +685,9 @@ runner.train(
 #     ]
 )
 ```
+
 </p>
 </details>
-
 
 <details>
 <summary>CV - MNIST segmentation</summary>
@@ -741,9 +746,9 @@ runner.train(
     verbose=True,
 )
 ```
+
 </p>
 </details>
-
 
 <details>
 <summary>CV - MNIST metric learning</summary>
@@ -826,9 +831,9 @@ runner.train(
     num_epochs=10,
 )
 ```
+
 </p>
 </details>
-
 
 <details>
 <summary>CV - MNIST GAN</summary>
@@ -965,9 +970,9 @@ runner.train(
 # %matplotlib inline
 # plt.imshow(runner.predict_batch(None)[0, 0].cpu().numpy())
 ```
+
 </p>
 </details>
-
 
 <details>
 <summary>CV - MNIST VAE</summary>
@@ -1096,9 +1101,9 @@ runner.run()
 # %matplotlib inline
 # plt.imshow(runner.predict_batch(None)[0].cpu().numpy().reshape(28, 28))
 ```
+
 </p>
 </details>
-
 
 <details>
 <summary>AutoML - hyperparameters optimization with Optuna</summary>
@@ -1159,6 +1164,7 @@ study = optuna.create_study(
 study.optimize(objective, n_trials=3, timeout=300)
 print(study.best_value, study.best_params)
 ```
+
 </p>
 </details>
 
@@ -1175,7 +1181,7 @@ runner:
     args:
       - _target_: torch.nn.Flatten
       - _target_: torch.nn.Linear
-        in_features: 784  # 28 * 28
+        in_features: 784 # 28 * 28
         out_features: 10
   input_key: features
   output_key: &output_key logits
@@ -1184,14 +1190,14 @@ runner:
 
 run:
   # ≈ stage 1
-  - _call_: train  # runner.train(...)
+  - _call_: train # runner.train(...)
 
     criterion:
       _target_: torch.nn.CrossEntropyLoss
 
     optimizer:
       _target_: torch.optim.Adam
-      params:  # model.parameters()
+      params: # model.parameters()
         _var_: model.parameters
       lr: 0.02
 
@@ -1204,8 +1210,7 @@ run:
           train: y
         batch_size: 32
 
-      &valid_loader_key valid:
-        &valid_loader
+      &valid_loader_key valid: &valid_loader
         _target_: torch.utils.data.DataLoader
         dataset:
           _target_: catalyst.contrib.datasets.MNIST
@@ -1218,7 +1223,7 @@ run:
         _target_: catalyst.callbacks.AccuracyCallback
         input_key: *output_key
         target_key: *target_key
-        topk: [1,3,5]
+        topk: [1, 3, 5]
       - _target_: catalyst.callbacks.PrecisionRecallF1SupportCallback
         input_key: *output_key
         target_key: *target_key
@@ -1231,21 +1236,22 @@ run:
     verbose: y
 
   # ≈ stage 2
-  - _call_: evaluate_loader  # runner.evaluate_loader(...)
+  - _call_: evaluate_loader # runner.evaluate_loader(...)
     loader: *valid_loader
     callbacks:
       - *accuracy_metric
-
 ```
 
 ```sh
 catalyst-run --config example.yaml
 ```
+
 </p>
 </details>
 
 ### Tests
-All Catalyst code, features, and pipelines [are fully tested](./tests).
+
+All Catalyst code, feaetures, and pipelines [are fully tested](./tests).
 We also have our own [catalyst-codestyle](https://github.com/catalyst-team/codestyle) and a corresponding pre-commit hook.
 During testing, we train a variety of different models: image classification,
 image segmentation, text classification, GANs, and much more.
@@ -1257,7 +1263,6 @@ best practices for your deep learning research and development.
 ### [Blog Posts](https://catalyst-team.com/post/)
 
 ### [Talks](https://catalyst-team.com/talk/)
-
 
 ## Community
 
@@ -1300,14 +1305,13 @@ best practices for your deep learning research and development.
 - [ID R&D Anti-spoofing Challenge](https://github.com/bagxi/idrnd-anti-spoofing-challenge-solution) - 14th place
 - [NeurIPS 2019: Recursion Cellular Image Classification](https://github.com/ngxbac/Kaggle-Recursion-Cellular) - 4th place
 - [MICCAI 2019: Automatic Structure Segmentation for Radiotherapy Planning Challenge 2019](https://github.com/ngxbac/StructSeg2019)
-  * 3rd place solution for `Task 3: Organ-at-risk segmentation from chest CT scans`
-  * and 4th place solution for `Task 4: Gross Target Volume segmentation of lung cancer`
+  - 3rd place solution for `Task 3: Organ-at-risk segmentation from chest CT scans`
+  - and 4th place solution for `Task 4: Gross Target Volume segmentation of lung cancer`
 - [Kaggle Seversteal steel detection](https://github.com/bamps53/kaggle-severstal) - 5th place
 - [RSNA Intracranial Hemorrhage Detection](https://github.com/ngxbac/Kaggle-RSNA) - 5th place
 - [APTOS 2019 Blindness Detection](https://github.com/BloodAxe/Kaggle-2019-Blindness-Detection) – 7th place
 - [Catalyst.RL - NeurIPS 2019: Learn to Move - Walk Around](https://github.com/Scitator/run-skeleton-run-in-3d) – 2nd place
 - [xView2 Damage Assessment Challenge](https://github.com/BloodAxe/xView2-Solution) - 3rd place
-
 
 </p>
 </details>
@@ -1330,7 +1334,6 @@ best practices for your deep learning research and development.
 </p>
 </details>
 
-
 <details>
 <summary>Other</summary>
 <p>
@@ -1345,7 +1348,6 @@ best practices for your deep learning research and development.
 
 </p>
 </details>
-
 
 See other projects at [the GitHub dependency graph](https://github.com/catalyst-team/catalyst/network/dependents).
 
@@ -1365,7 +1367,6 @@ please open an issue first and discuss it with us.
 - Please see the [Contribution Guide](CONTRIBUTING.md) for more information.
 - By participating in this project, you agree to abide by its [Code of Conduct](CODE_OF_CONDUCT.md).
 
-
 ### User Feedback
 
 We've created `feedback@catalyst-team.com` as an additional channel for user feedback.
@@ -1377,18 +1378,19 @@ We've created `feedback@catalyst-team.com` as an additional channel for user fee
 
 We appreciate any type of feedback. Thank you!
 
-
 ### Acknowledgments
 
 Since the beginning of the Сatalyst development, a lot of people have influenced it in a lot of different ways.
 
 #### Catalyst.Team
+
 - [Dmytro Doroshenko](https://www.linkedin.com/in/dmytro-doroshenko-05671112a/) ([ditwoo](https://github.com/Ditwoo))
 - [Eugene Kachan](https://www.linkedin.com/in/yauheni-kachan/) ([bagxi](https://github.com/bagxi))
 - [Nikita Balagansky](https://www.linkedin.com/in/nikita-balagansky-50414a19a/) ([elephantmipt](https://github.com/elephantmipt))
 - [Sergey Kolesnikov](https://www.scitator.com/) ([scitator](https://github.com/Scitator))
 
 #### Catalyst.Contributors
+
 - [Aleksey Grinchuk](https://www.facebook.com/grinchuk.alexey) ([alexgrinch](https://github.com/AlexGrinch))
 - [Aleksey Shabanov](https://linkedin.com/in/aleksey-shabanov-96b351189) ([AlekseySh](https://github.com/AlekseySh))
 - [Alex Gaziev](https://www.linkedin.com/in/alexgaziev/) ([gazay](https://github.com/gazay))
@@ -1406,8 +1408,8 @@ Since the beginning of the Сatalyst development, a lot of people have influence
 - [Vsevolod Poletaev](https://linkedin.com/in/vsevolod-poletaev-468071165) ([hexfaker](https://github.com/hexfaker))
 - [Yury Kashnitsky](https://www.linkedin.com/in/kashnitskiy/) ([yorko](https://github.com/Yorko))
 
-
 ### Trusted by
+
 - [Awecom](https://www.awecom.com)
 - Researchers at the [Center for Translational Research in Neuroimaging and Data Science (TReNDS)](https://trendscenter.org)
 - [Deep Learning School](https://en.dlschool.org)
@@ -1427,7 +1429,6 @@ Since the beginning of the Сatalyst development, a lot of people have influence
 - [SoftConstruct](https://www.softconstruct.io/)
 - Researchers at [Tinkoff](https://www.tinkoff.ru/eng/)
 - Researchers at [Yandex.Research](https://research.yandex.com)
-
 
 ### Citation
 
