@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   build:
@@ -21,11 +22,11 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - if: ${{ startsWith(runner.os, 'macOS') }}
         name: Setup macOS
-        run: 'brew install libomp
+        run: "brew install libomp
 
           brew install gnu-sed
 
-          '
+          "
       - id: measurement-4
         name: Record Measurement After Setup macOS
         uses: green-coding-solutions/eco-ci-energy-estimation@v4
@@ -35,7 +36,8 @@ jobs:
           task: get-measurement
       - if: ${{ matrix.requirements == 'minimal' }}
         name: set minimal dependencies
-        run: 'python -c "req = open(''./requirements/requirements.txt'').read().replace(''>'',
+        run:
+          'python -c "req = open(''./requirements/requirements.txt'').read().replace(''>'',
           ''='') ; open(''./requirements/requirements.txt'', ''w'').write(req)"
 
           python -c "req = open(''./requirements/requirements-cv.txt'').read().replace(''>'',
@@ -72,7 +74,8 @@ jobs:
           task: get-measurement
       - id: pip-cache
         name: get pip cache
-        run: 'python -c "from pip._internal.locations import USER_CACHE_DIR; print(''::set-output
+        run:
+          'python -c "from pip._internal.locations import USER_CACHE_DIR; print(''::set-output
           name=dir::'' + USER_CACHE_DIR)"
 
           '
@@ -86,40 +89,46 @@ jobs:
       - name: cache pip
         uses: actions/cache@v2
         with:
-          key: ${{ runner.os }}-${{ matrix.python-version }}-${{ matrix.requirements
+          key:
+            ${{ runner.os }}-${{ matrix.python-version }}-${{ matrix.requirements
             }}-pip-${{ hashFiles('./requirements/requirements.txt') }}-${{ hashFiles('./requirements/requirements-dev.txt')
             }}
           path: ${{ steps.pip-cache.outputs.dir }}
-          restore-keys: '${{ runner.os }}-${{ matrix.python-version }}-${{ matrix.requirements
+          restore-keys:
+            "${{ runner.os }}-${{ matrix.python-version }}-${{ matrix.requirements
             }}-pip-
 
-            '
+            "
       - name: cache pip contrib
         uses: actions/cache@v2
         with:
-          key: ${{ runner.os }}-${{ matrix.python-version }}-${{ matrix.requirements
+          key:
+            ${{ runner.os }}-${{ matrix.python-version }}-${{ matrix.requirements
             }}-pip-contrib-${{ hashFiles('./requirements/requirements-cv.txt') }}-${{
             hashFiles('./requirements/requirements-ml.txt') }}-${{ hashFiles('./requirements/requirements-optuna.txt')
             }}
           path: ${{ steps.pip-cache.outputs.dir }}
-          restore-keys: '${{ runner.os }}-${{ matrix.python-version }}-${{ matrix.requirements
+          restore-keys:
+            "${{ runner.os }}-${{ matrix.python-version }}-${{ matrix.requirements
             }}-pip-contrib-
 
-            '
+            "
       - name: cache pip loggers
         uses: actions/cache@v2
         with:
-          key: ${{ runner.os }}-${{ matrix.python-version }}-${{ matrix.requirements
+          key:
+            ${{ runner.os }}-${{ matrix.python-version }}-${{ matrix.requirements
             }}-pip-loggers-${{ hashFiles('./requirements/requirements-comet.txt')
             }}-${{ hashFiles('./requirements/requirements-mlflow.txt') }}-${{ hashFiles('./requirements/requirements-neptune.txt')
             }}-${{ hashFiles('./requirements/requirements-wandb.txt') }}
           path: ${{ steps.pip-cache.outputs.dir }}
-          restore-keys: '${{ runner.os }}-${{ matrix.python-version }}-${{ matrix.requirements
+          restore-keys:
+            "${{ runner.os }}-${{ matrix.python-version }}-${{ matrix.requirements
             }}-pip-loggers-
 
-            '
+            "
       - name: install dependencies
-        run: '# python -m pip install --upgrade --user pip
+        run: "# python -m pip install --upgrade --user pip
 
           pip install -r ./requirements/requirements.txt -r ./requirements/requirements-dev.txt
           -r ./requirements/requirements-cv.txt -r ./requirements/requirements-ml.txt
@@ -133,7 +142,7 @@ jobs:
 
           pip list
 
-          '
+          "
         shell: bash
       - id: measurement-13
         name: Record Measurement After install dependencies
@@ -143,8 +152,8 @@ jobs:
           label: install dependencies
           task: get-measurement
       - env:
-          MKL_NUM_THREADS: '1'
-          OMP_NUM_THREADS: '1'
+          MKL_NUM_THREADS: "1"
+          OMP_NUM_THREADS: "1"
           REQUIREMENTS: ${{ matrix.requirements }}
         name: check examples
         run: 'pip install -e . --no-deps
@@ -192,10 +201,10 @@ jobs:
           - ubuntu-20.04
           - macOS-10.15
         python-version:
-          - '3.7'
-          - '3.8'
-          - '3.9'
-          - '3.10'
+          - "3.7"
+          - "3.8"
+          - "3.9"
+          - "3.10"
         requirements:
           - minimal
       max-parallel: 4
